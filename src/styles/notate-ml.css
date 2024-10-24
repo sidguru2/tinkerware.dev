@@ -1,0 +1,30 @@
+@import url('global.css');
+
+
+.add-images-image {
+  width: 320px;
+  height: auto;
+}
+
+.guidelines-image {
+  max-width: 320px; 
+  height: auto; 
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.add-images-image-small {
+  width: 30%;
+  height: auto;
+}
+.annotate-images-image {
+  width: 320px;
+  height: auto;
+  align-self: center;
+}
+.annotate-images-fullwidth {
+  height: auto; 
+  width: 100%; 
+  margin: 0 auto;
+  align-self: center;
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-US" >
+
+<head>
+  <title>Notate ML</title>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta name="author" content="support@tinkerware.dev">
+  <meta property="og:title" content="Notate ML" >
+  <meta property="og:site_name" content="Notate ML" >
+  <meta property="og:type" content="website" >
+  <meta property="og:url" content="https://www.tinkerware.dev/notate-ml" >
+  <meta name="image" property="og:image" content="https://www.tinkerware.dev/images/zebra.png" >
+  <meta name="description" property="og:description" content="Create object detection datasets from the comfort of your iphone" >
+  <link href="../../images/notate-ml.png" rel="shortcut icon" type="image/png">
+  <link rel="stylesheet" href="../styles/notate-ml.css">
+</head>
+
+<body>
+  <script>
+    var interval = setInterval(function () {
+      var countForVideo = document.getElementById('preview').readyState;
+      if (countForVideo == 4) {
+        document.getElementById('preview').play();
+        clearInterval(interval);
+      }
+    }, 2000);
+
+    function toggleTopNav() {
+      var x = document.getElementById("links");
+      if (x.style.display === "flex") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "flex";
+      }
+    }
+
+    function closeTopNav(ev) {
+      var x = document.getElementById("links");
+      x.style.display = "none";
+      return true;
+    }
+
+  </script>
+  <div class="nav">
+    <a href="#">Notate ML</a>
+    <a href="#features">Features</a>
+    <a href="#guidelines">Guidelines</a>
+    <a href="https://apps.apple.com/us/app/notate-ml/id1605408700" target="_blank">Download</a>
+    <a href="#privacy">Privacy</a>
+    <a href="/">Tinkerware></a>
+  </div>
+  <div class="topnav">
+    <div id="links">
+      <a href="#" onclick="closeTopNav(event);">Notate ML</a>
+      <a href="#features" onclick="return closeTopNav(event);">Features</a>
+      <a href="#guidelines" onclick="return closeTopNav(event);">Guidelines</a>
+      <a href="https://apps.apple.com/us/app/notate-ml/id1605408700" target="_blank">Download</a>
+      <a href="#privacy" onclick="closeTopNav(event);">Privacy</a>
+      <a href="/" onclick="return closeTopNav(event);">Tinkerware></a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="toggleTopNav()">
+
+    </a>
+  </div>
+  <div class="app-store">
+    <a href="https://apps.apple.com/us/app/notate-ml/id1605408700" target="_blank"><img
+        src="../images/ntml-appstore-badge.svg" alt="Apple App Store Badge"></a>
+  </div>
+  <div class="content">
+    <div class="page-header">
+      <div class="img-wrapper">
+        <a href="https://apps.apple.com/us/app/notate-ml/id1605408700" target="_blank">
+          <img src="../images/ntml-logo-transparent.svg" height="200" width="200"  alt="Apple App Store Badge">
+        </a>
+      </div>
+      <div class="titles flexLeft">
+        <div class="title">
+          Notate ML
+        </div>
+        <div class="subtitle">
+          Click. Tag. Download.</div>
+      </div>
+    </div>
+
+
+    <div class="section">
+      <div id="notateml" class="chapter">
+        <div class="card full-width">
+          <div class="topic">
+            <div class="pics">
+              <img  src="../images/ipad-datasets.png" class="largeOnly" alt="Add Datasets on Tablet">
+              <img  src="../images/iphone-waxwing.png"  alt="Add Datasets on Phone">
+            </div>
+          </div>
+          <div class="bullet-list">
+            <p>Preparing image datasets is a critical and challenging task in any Machine Learning project.
+            </p>
+            <p>Notate ML
+              brings the power and usability of Apple's mobile devices to accelerate this task and deliver
+              higher quality training data to your object detection model.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section offBlack">
+      <div class="chapter">
+        <a id="features" class="title">Features</a>
+        <div class="card">
+          <div class="topic">
+            <video id="preview" preload="auto" controls width="248" height="480" muted loop>
+              <source src="../images/iphone-preview-23fps-30s-exp.mp4" type="video/mp4">
+            </video>
+            <div class="bullet-list">
+              <p><a href="#create-dataset">Create datasets</a></p>
+              <p><a href="#add-labels">Add labels</a></p>
+              <p><a href="#add-images">Import or capture images</a>
+              </p>
+              <p><a href="#annotate">Annotate images</a></p>
+              <p><a href="#export">Export datasets for training</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="chapter">
+        <a id="create-dataset" class="title">Create datasets</a>
+        <div class="card">
+          <div class="topic">
+            <img src="../images/add-dataset-redux.png" width="522" height="2112" class="full-width auto-height" alt="Add dataset"
+              loading="lazy">
+            <div class="bullet-list">
+              <p>Touch <em>`New`</em> on the bottom toolbar to create a dataset...</p>
+              <p>...or select an existing dataset and then touch <em>`Edit`</em>.</p>
+              <p>Then edit the name and add labels.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section offBlack">
+      <div class="chapter">
+        <a id="add-labels" class="title">Add Labels</a>
+        <div class="card">
+          <div class="topic">
+            <div class="card">
+              <div class="bullet-list">
+                <p>Input labels one at a time...</p>
+              </div>
+              <img src="../images/add-labels-one.png" width="1016" height="1966" class="width-80 auto-height" alt="Add one label" >
+            </div>
+            <div class="card">
+              <div class="bullet-list">
+                <p>or as a comma-separated list...</p>
+              </div>
+              <img src="../images/add-labels-list.png" width="976" height="1966" class="width-80 auto-height" alt="Add labels using list">
+            </div>
+            <div class="card">
+              <div class="bullet-list">
+                <p>...or scan them in using the camera.</p>
+              </div>
+              <img src="../images/add-labels-scan.png" width="1012" height="2346" class="width-80 auto-height" alt="Scan labels">
+            </div>
+          </div>
+          <div class="card">
+            <div class="bullet-list">
+              <p class="full-width centered-text">Swipe label left to edit or delete it.</p>
+            </div>
+            <img src="../images/label-swipe-left.png" width="5907" height="1173" class="full-width auto-height" alt="Swipe left on label">
+            <br>
+          </div>
+          <div class="card">
+            <img src="../images/label-finish-edit.png" width="5907" height="1173" class="full-width auto-height" alt="Swipe right to finish editing label">
+            <div class="bullet-list">
+              <p class="full-width centered-text">Only unused labels can be deleted.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="chapter">
+        <a id="add-images" class="title">Add Images</a>
+        <div class="card">
+          <div class="topic">
+            <img src="../images/add-images.png" width="2695" height="2475" class="add-images-image" alt="Add images">
+            <div class="bullet-list">
+              <p>Use <em>`Import`</em> or <em>`Capture`</em> to add images from your mobile device to a
+                dataset.</p>
+            </div>
+          </div>
+          <div class="topic">
+            <div>
+              <h3>Import</h3>
+              <div class="bullet-list">
+                <p>Touch <em>`Import`</em> and allow access to camera roll.</p>
+                <p>Select up to <em>50</em> photos to import as a batch.</p>
+                <p>Once you have made your selections, touch <em>`Add`</em> to complete the
+                  import.
+                </p>
+              </div>
+            </div>
+            <img src="../images/import-from-library.jpg" width="340" height="362"  class="add-images-image" alt="Import images from library">
+
+          </div>
+          <div class="topic align-items-center">
+            <div class="flex-column">
+              <h3>Capture</h3>
+              <div class="bullet-list">
+                <p>When prompted, grant access to your camera.</p>
+              </div>
+              <img src="../images/camera-access.jpg" width="295" height="172" class="add-images-image-small" alt="Grant access">
+              <br>
+              <div class="bullet-list">
+                <p>Touch <em>`Capture`</em> to grab a frame or <em>`Cancel`</em> to go back.
+                </p>
+                <p>Tap <em>`&#10003;`</em> to add the captured frame to the dataset.</p>
+              </div>
+            </div>
+            <img src="../images/add-capture.png" width="2869" height="2759" class="add-images-image" alt="Capture image using camera">
+          </div>
+          <div class="card">
+            <div class="bullet-list">
+              <p>After adding images to your dataset, annotate them one at a time.</p>
+            </div>
+            <div class="topic">
+              <img src="../images/images-in-dataset.png" width="1732" height="1251" class="add-images-image" alt="Images in dataset">
+              <img src="../images/image-for-annotation.png" width="1732" height="1251"
+              class="add-images-image" alt="Image selected for annotation">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="section offBlack">
+      <div class="chapter">
+        <a id="annotate" class="title">Annotate Images</a>
+        <div class="card">
+          <div class="bullet-list">
+            <p>Zoom in and out of the image.</p>
+            <p>Crop to a region of interest.</p>
+            <p>Draw bounding boxes around target objects and label them.</p>
+          </div>
+          <div class="topic">
+            <div class="card">
+              <h3>Zoom</h3>
+              <div class="bullet-list">
+                <p>Pinch with two fingers to zoom in or out.</p>
+                <p>Drag with two fingers to pant.</p>
+                <p>View visible area relative to the original image on the
+                  preview window.</p>
+              </div>
+            </div>
+            <img src="../images/curiosity.gif" width="960" height="643"
+            class="annotate-images-image" alt="Zoom into image while annotating">
+          </div>
+          <div class="topic">
+            <div class="card">
+              <h3>Crop</h3>
+              <div class="bullet-list">
+                <p>After zooming to a region of interest, tap <em>`Crop`</em> to crop the image
+                  to
+                  visible dimensions.</p>
+                <p>Cropping is possible, only when no objects have been tagged.</p>
+              </div>
+            </div>
+            <img src="../images/cygnus.gif" width="960" height="638"
+            class="annotate-images-image" alt="Crop image before annotating">
+
+          </div>
+          <img src="../images/crop-dimensions.png" width="2846" height="343"
+            class="annotate-images-fullwidth" alt="Dimensions of image">
+          <br>
+          <div class="topic">
+            <div class="card">
+              <h3>Tag</h3>
+              <br>
+              <div class="bullet-list">
+                <p>Draw bounding boxes with your finger or a stylus.</p>
+                <p>Use the picker to assign a label.</p>
+                <p>Long press on a box to select it.</p>
+              </div>
+              <img src="../images/annotating.png" width="960" height="638" class="annotate-images-fullwidth" alt="Bounding boxes">
+              <div class="bullet-list">
+                <p>Change label while the box is selected, or tap <em>`-`</em> to delete the box.
+                </p>
+                <p>Undo last action, tap <em>`&#10003;`</em> to save and <em>`x`</em> to reset to
+                  last
+                  saved state.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="chapter">
+        <a id="export" class="title">Export Datasets</a>
+        <div class="card">
+          <div class="topic">
+            <div class="bullet-list">
+              <p>Select and open the dataset and tap <em>`Export`</em>.</p>
+              <p>Select the export schema - <a
+                  href="https://medium.com/@marvinpdroid/introducing-notate-ml-8de9b68715f4"
+                  style="text-decoration: underline;">YOLO, Create ML or Auto ML</a>.</p>
+              <p>Preview the files that will be exported.</p>
+              <p>Tap <em>`&#10003;`</em> to download to a location accessible to your device.</p>
+            </div>
+            <img src="../images/export-dataset.png" width="2933" height="2763"
+            class="add-images-image" alt="Export dataset">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section offBlack">
+      <div class="chapter">
+        <a id="guidelines" class="title">Guidelines</a>
+        <div class="card">
+          <div class="topic">
+            <img src="../images/tip-crop.png" width="3190" height="2658"
+            class="guidelines-image " alt="Guidelines on cropping">
+            <div>
+              <h2>01</h2>
+              <h3>Crop images before tagging them</h3>
+              <div class="bullet-list">
+                <p>We find it space-efficient to crop the images to specific regions of interest before
+                  tagging objects, unless your project requires feeding the entire image to the model
+                  for
+                  training.</p>
+                <p>The crop feature will not work if the given image has any bounding boxes present.
+                  Finish
+                  cropping your image before tagging.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="topic">
+            <div>
+              <h2>02</h2>
+              <h3>Use a stylus</h3>
+              <div class="bullet-list">
+                <p>We find it helpful to use a stylus for drawing accurate bounding boxes, especially
+                  for very small objects.</p>
+                <p>Note that the minimum width and height of a bounding box in Notate ML is 15 pixels.
+                </p>
+              </div>
+            </div>
+            <img src="../images/tip-stylus.jpg" width="378" height="283"
+            class="guidelines-image " alt="Using a stylus">
+          </div>
+
+          <div class="topic">
+            <img src="../images/ipad-datasets.png" width="660" height="474"
+            class="guidelines-image " alt="Guidelines on cropping">
+            <div>
+              <h2>03</h2>
+              <h3>Keep your datasets small</h3>
+              <div class="bullet-list">
+                <p>We find it optimal to keep the size of each dataset to under 1000 images.</p>
+                <p>Smaller datasets are easier to export. It is also easier to isolate issues with
+                  training data with smaller sets.</p>
+                <p>Splitting the project into multiple datasets also helps in cross-validation and
+                  testing.</p>
+                <p>Export and delete unused datasets to conserve device storage.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="section">
+      <div class="chapter">
+        <a class="title" id="privacy" >Privacy Notice</a>
+        <div class="card" >
+          <p class="centered">
+            Last updated October 29 2023
+          </p>
+          <div class="bullet-list textShadow privacy-text" >
+            <p>Notate ML is a mobile application that helps create datasets for training
+              "Object Detection" machine learning models.</p>
+            <p>It does not require or access any of your personal information.</p>
+            <p>It does not track or collect any usage data.</p>
+            <p>It stores the last visited dataset and dataset image in device local storage, and uses this
+              to let you resume your work from the previous session.</p>
+            <p>It requires access to your device camera to capture photos for your datasets. It will ask for
+              your permission to access the camera on first use of the feature. If you choose to decline,
+              you can grant access at a later date using the device's "Settings" feature.</p>
+            <p>It provides the ability to import photos from your device library into your datasets. It uses
+              Apple's "Photo Picker" feature that restricts the application's access to only those photos
+              selected by you for import.</p>
+            <p>It uses crash logs made available through Apple App Store to diagnose issues that users may
+              experience in the app.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <p class="copyright">&copy; 2023 Rajaram Gurumurthi</p>
+    <p class="privacy">This website does not collect any personal information or usage data.</p>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+.nav {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  /* width: 100%; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  letter-spacing: 0.1rem;
+  background-color: black;
+}
+
+.nav * {
+  /* padding: 0.5rem; */
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: medium;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  font-size: medium;
+  color: aqua;
+}
+  .page-header img {
+    height: 100px;
+    width: auto;
+  }
+/* #and (orientation: portrait) */
+  /* @media only screen and (min-width: 1024px) or (orientation: portrait)  {
+    .nav {
+      display: none;
+    }
+    .topnav {
+      display: block;
+    }
+  } */
+  
+@media only screen and (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+  .topnav {
+    display: block;
+  }
+}
+
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: rgba(2,2,2,0.9);
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  min-height: 50px;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #links {
+  display: none;
+  flex-direction: column;
+  width: 100vw;
+  background-color:maroon;
+}
+
+.topnav #links  * {
+  /* padding: 0.5rem; */
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.topnav #links a {
+  text-decoration: none;
+  font-size: large;
+}
+
+.topnav #links a:hover {
+  text-decoration: none;
+  font-size: large;
+  color: aqua;
+}
+
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background-image: url('./../images/menu_FILL0_wght400_GRAD0_opsz24.svg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 1vw;
+  right: 10px;
+  top: 10px;
+}
+
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav {
+    display: flex;
+  }
+  .topnav {
+    display: none;
+  }
+}
